@@ -947,6 +947,12 @@ contract UnitTestStakers is Stakers {
         super.createStake("");
     }
 
+    event AdvanceEpoch();
+
+    function advanceEpoch() external {
+        emit AdvanceEpoch();
+    }
+
     function _makeEpochSnapshots(uint256 optionalDuration) external returns(uint256) {
         currentSealedEpoch++;
         EpochSnapshot storage newSnapshot = epochSnapshots[currentSealedEpoch];

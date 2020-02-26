@@ -553,4 +553,9 @@ contract('Staker test', async ([firstStaker, secondStaker, thirdStaker, firstDep
         expect(wReq.amount).to.be.bignumber.equal(amount);
         expect(wReq.epoch).to.be.bignumber.equal(currEpoch);
     })
+
+    it("temp", async ()=> {
+        const x = await this.stakers.stakersNum.call()
+        console.log("stakersNum at start", x.toString())
+    })
 });
